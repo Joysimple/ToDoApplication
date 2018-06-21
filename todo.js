@@ -17,12 +17,13 @@ function createToDoTask(){
         var removeButton = document.createElement("button");
         removeButton.innerHTML = "Done";
         removeButton.addEventListener("click", removeTask);
-        function removeTask(event) {
-            var taskItem = event.target.parentElement;
-            ulList.removeChild(taskItem); 
-        }
+        
     }
     else {
         errorElement.innerHTML = "You have to input something";
     }
+}
+function removeTask(event) {
+    var taskItem = event.target.parentElement;
+    ulList.removeChild(taskItem); 
 }
