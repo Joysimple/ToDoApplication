@@ -1,0 +1,16 @@
+body {
+    background-color: #aeb3ae;
+}
+h1 {
+    color: #4a4d4a;
+    text-align: center;    
+}
+#add {
+    background-color: #2a997d;
+    color:#4a4d4a;
+}
+#clear {
+    background-color: #d42c2c; 
+    color:#4a4d4a;
+}
+
