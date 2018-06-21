@@ -7,6 +7,8 @@ function createToDoTask(){
         var listElement = document.createElement("li");
         var text = document.createTextNode(textInput);
         listElement.appendChild(text);
+        var ulList = document.getElementById("taskList");
+        listElement.appendChild(ulList);
     }
     else {
         errorElement.innerHTML = "You have to input something";
