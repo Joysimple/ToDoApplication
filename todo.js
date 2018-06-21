@@ -1,6 +1,7 @@
 var addButton = document.getElementById("add");
 addButton.addEventListener("click", createToDoTask);
 var errorElement = document.getElementById("error");
+var ulList = document.getElementById("taskList");
 var clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", clearFunction);
 function clearFunction(){
@@ -12,12 +13,13 @@ function createToDoTask(){
         var listElement = document.createElement("li");
         var text = document.createTextNode(textInput);
         listElement.appendChild(text);
-        var ulList = document.getElementById("taskList");
         ulList.appendChild(listElement);
         var removeButton = document.createElement("button");
         removeButton.innerHTML = "Done";
-        removeButton.addEventListener("click", function() {
-            listElement.remove();
+        removeButton.addEventListener("click", removeTask);
+        function removeTask(event) {
+            var taskItem = event.target.parentElement;
+            ulList.removeChild(taskItem); 
         }
     }
     else {
