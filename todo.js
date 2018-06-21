@@ -3,8 +3,6 @@ addButton.addEventListener("click", createToDoTask);
 var errorElement = document.getElementById("error");
 var clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", clearFunction);
-var removeButton = document.createElement("button");
-removeButton.innerHTML = "Done";
 function clearFunction(){
     document.getElementById("task").value = "";
 }
@@ -16,6 +14,11 @@ function createToDoTask(){
         listElement.appendChild(text);
         var ulList = document.getElementById("taskList");
         ulList.appendChild(listElement);
+        var removeButton = document.createElement("button");
+        removeButton.innerHTML = "Done";
+        removeButton.addEventListener("click", function() {
+            listElement.remove();
+        }
     }
     else {
         errorElement.innerHTML = "You have to input something";
