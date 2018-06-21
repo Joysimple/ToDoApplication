@@ -5,7 +5,7 @@ function createToDoTask(){
     var textInput = document.getElementById("task").value;
     if (textInput.length > 0) {
         var listElement = document.createElement("li");
-        var text = document.createTextNode('bla bla bla');
+        var text = document.createTextNode(textInput);
         listElement.appendChild(text);
     }
     else {
