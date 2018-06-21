@@ -13,11 +13,11 @@ function createToDoTask(){
         var listElement = document.createElement("li");
         var text = document.createTextNode(textInput);
         listElement.appendChild(text);
-        ulList.appendChild(listElement);
         var removeButton = document.createElement("button");
         removeButton.innerHTML = "Done";
         removeButton.addEventListener("click", removeTask);
-        
+        listElement.appendChild(removeButton);
+        ulList.appendChild(listElement);
     }
     else {
         errorElement.innerHTML = "You have to input something";
